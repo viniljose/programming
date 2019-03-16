@@ -1,0 +1,8 @@
+LinearSearch o(n)
+BinarySearch(log n)
+Bubble sort o(n2)
+quick sort o(n log n)
+binary tree o(log n)
+
+if log n = x i.e 10^x=n
+
