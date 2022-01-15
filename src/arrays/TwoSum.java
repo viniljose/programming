@@ -3,7 +3,7 @@ package arrays;
 import java.util.HashMap;
 
 /**
- * https://leetcode.com/explore/interview/card/microsoft/30/array-and-strings/173/
+ * 
  * Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
  */
 public class TwoSum {
