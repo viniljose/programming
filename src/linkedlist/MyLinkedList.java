@@ -16,6 +16,22 @@ public class MyLinkedList {
         System.out.println(ll.get(1));
         ll.deleteAtIndex(1);
         System.out.println(ll.get(1));
+        
+        //Test Case 2
+        System.out.println("--------Case 2-----------");
+        MyLinkedList case2 = new MyLinkedList();
+        case2.addAtHead(4);
+        case2.get(1);
+        case2.addAtHead(1);
+        case2.addAtHead(5);
+        case2.deleteAtIndex(3);
+        case2.addAtHead(7);
+        case2.get(3);
+        case2.get(3);
+        case2.get(3);
+        case2.addAtHead(1);
+        case2.deleteAtIndex(4);
+        case2.print();
     }
 
     public void print(){
@@ -23,7 +39,7 @@ public class MyLinkedList {
     }
 
     public int get(int index) {
-        if(index < 0 || index>size) return -1;
+        if(index < 0 || index>=size) return -1;
         ListNode curr = head;
         for (int i = 0; i < index+1; i++) {
             curr = curr.next;
