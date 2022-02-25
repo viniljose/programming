@@ -17,7 +17,9 @@ public class IntersectionNode {
 
         IntersectionNode intersectionNode = new IntersectionNode();
         System.out.println(intersectionNode.getIntersectionNode(head,head2).val);
+         System.out.println(intersectionNode.getIntersectionNodeFinal(head,head2).val);
     }
+    //o(m+n) o(n)
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         Set nodesInB= new HashSet();
         while (headB!=null){
@@ -30,5 +32,14 @@ public class IntersectionNode {
             headA=headA.next;
         }
         return null;
+    }
+    //o(m+n)o(1)
+    public ListNode getIntersectionNodeFinal(ListNode headA, ListNode headB) {
+        ListNode pA=headA,pB=headB;
+        while (pA!=pB){
+            pA =(pA==null?headB:pA.next);
+            pB =(pB==null?headA:pB.next);
+        }
+        return pA;
     }
 }
