@@ -10,6 +10,15 @@ public class RemoveNthFromEnd {
         RemoveNthFromEnd removeNthFromEnd = new RemoveNthFromEnd();
         removeNthFromEnd.removeNthFromEnd(head,2);
         System.out.println(head.toStringNoSentinel(head));
+
+        ListNode node51 = new ListNode(5);
+        ListNode node41 = new ListNode(4,node51);
+        ListNode node31 = new ListNode(3,node41);
+        ListNode node21 = new ListNode(2,node31);
+        ListNode head1 = new ListNode(1,node21);
+        RemoveNthFromEnd removeNthFromEndOnePass = new RemoveNthFromEnd();
+        removeNthFromEnd.removeNthFromEndOnePass(head1,2);
+        System.out.println(head.toStringNoSentinel(head1));
     }
 
     //two pass solution
@@ -28,6 +37,22 @@ public class RemoveNthFromEnd {
             curr= curr.next;
         }
         curr.next=curr.next.next;
+        return head;
+    }
+
+    public ListNode removeNthFromEndOnePass(ListNode head, int n) {
+        ListNode curr = head;
+        for (int i = 0; i < n; i++) {
+            curr=curr.next;
+        }
+        if(curr==null)
+            return head.next;
+        ListNode beforeRemoval =head;
+        while (curr.next!=null){
+            curr=curr.next;
+            beforeRemoval=beforeRemoval.next;
+        }
+        beforeRemoval.next=beforeRemoval.next.next;
         return head;
     }
 }
