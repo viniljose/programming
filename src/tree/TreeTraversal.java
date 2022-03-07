@@ -6,6 +6,13 @@ import java.util.Stack;
 
 public class TreeTraversal {
     public static void main(String[] args) {
+        TreeTraversal traversal = new TreeTraversal();
+        TreeNode tree =new TreeNode(1);
+        tree.left = new TreeNode(2);
+        tree.right = new TreeNode(5);
+        tree.left.left = new TreeNode(3);
+        tree.left.right = new TreeNode(4);
+        System.out.println(traversal.preorderTraversal(tree));
 
     }
     public List<Integer> preorderTraversal(TreeNode root) {
