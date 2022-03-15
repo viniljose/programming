@@ -1,5 +1,8 @@
 package tree;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class Depth {
     private int answer = 0;
     public static void main(String[] args) {
@@ -30,5 +33,29 @@ public class Depth {
         int left = maximumDepthBottomUp(root.left);
         int right = maximumDepthBottomUp(root.right);
         return Math.max(left,right)+1;
+    }
+
+    private int maxDepth(TreeNode root) {
+        if(root == null)
+            return 0;
+        int depth = 0;
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        queue.offer(null);
+        while (!queue.isEmpty()){
+            TreeNode node = queue.poll();
+
+            if (node != null) {
+                if(node.left != null)
+                    queue.add(node.left);
+                if(node.right != null)
+                    queue.add(node.right);
+            } else {
+                depth++;
+                if(!queue.isEmpty())
+                queue.offer(null);
+            }
+        }
+        return depth;
     }
 }
