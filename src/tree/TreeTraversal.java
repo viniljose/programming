@@ -1,8 +1,6 @@
 package tree;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 public class TreeTraversal {
     public static void main(String[] args) {
@@ -31,6 +29,7 @@ public class TreeTraversal {
         tree3.right = new TreeNode(4);
         tree3.left.left = new TreeNode(1);
         tree3.left.right = new TreeNode(2);
+        System.out.println(traversal.postorderTraversal(tree3));
 
         //BFS data
         TreeNode tree4=new TreeNode(1);
@@ -38,6 +37,7 @@ public class TreeTraversal {
         tree4.right = new TreeNode(3);
         tree4.left.left = new TreeNode(4);
         tree4.left.right = new TreeNode(5);
+        System.out.println(traversal.levelOrder(tree4));
 
     }
     //iteration
@@ -89,5 +89,46 @@ public class TreeTraversal {
         return results;
     }
 
+    //recursion
+    public List<Integer> postorderTraversal(TreeNode root) {
+        List<Integer> results = new ArrayList<>();
+        postoderHelper(root,results);
+        return results;
+    }
+    private void postoderHelper(TreeNode root, List<Integer> results){
+        if(root != null){
+            postoderHelper(root.left,results);
+            postoderHelper(root.right,results);
+            results.add(root.val);
+        }
+    }
 
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        List<List<Integer>> result = new ArrayList();
+        if(root == null)
+            return result;
+        Queue<TreeNode> queue = new LinkedList();
+        queue.offer(root);
+        queue.offer(null);
+        List levelList = new ArrayList();
+        while (!queue.isEmpty()){
+            TreeNode curr = queue.poll();
+            if(curr!= null){
+                levelList.add(curr.val);
+                if(curr.left != null){
+                    queue.offer(curr.left);
+                }
+                if(curr.right != null){
+                    queue.offer(curr.right);
+                }
+            } else {
+                List curr_list = new ArrayList(levelList);
+                result.add(curr_list);
+                levelList.clear();
+                if(!queue.isEmpty())
+                 queue.offer(null);
+            }
+        }
+        return result;
+    }
 }
