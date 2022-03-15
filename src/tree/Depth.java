@@ -9,18 +9,26 @@ public class Depth {
         tree.left.left = new TreeNode(3);
         tree.left.right = new TreeNode(4);
         Depth depth = new Depth();
-        depth.maximum_depth(tree,1);
+        depth.maximumDepth(tree,1);
         System.out.println(depth.answer);
-
+        System.out.println(depth.maximumDepthBottomUp(tree));
     }
 
-    private void maximum_depth(TreeNode root, int depth) {
+    private void maximumDepth(TreeNode root, int depth) {
         if(root == null)
             return;
         if(root.left == null && root.right==null){
             answer = Math.max(answer,depth);
         }
-        maximum_depth(root.left,depth+1);
-        maximum_depth(root.right,depth+1);
+        maximumDepth(root.left,depth+1);
+        maximumDepth(root.right,depth+1);
+    }
+
+    private int maximumDepthBottomUp(TreeNode root){
+        if(root == null)
+            return 0;
+        int left = maximumDepthBottomUp(root.left);
+        int right = maximumDepthBottomUp(root.right);
+        return Math.max(left,right)+1;
     }
 }
