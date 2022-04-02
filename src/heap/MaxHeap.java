@@ -27,6 +27,40 @@ public class MaxHeap {
             parent = index/2;
         }
     }
+    public int peek(){
+        return maxHeap[1];
+    }
+    public int pop(){
+        if(size<1){
+            System.out.println("Heap is Empty");
+            return Integer.MAX_VALUE;
+        }
+        int element = maxHeap[1];
+        maxHeap[1] = maxHeap[size];
+        size--;
+        int index = 1;
+
+        while (index<=size/2){
+            int left = index*2;
+            int right = index*2+1;
+            if (maxHeap[left]>maxHeap[index] || maxHeap[right]>maxHeap[index]){
+                if(maxHeap[left]> maxHeap[right]) {
+                    int temp = maxHeap[index];
+                    maxHeap[index] = maxHeap[left];
+                    maxHeap[left] = temp;
+                    index = left;
+                } else {
+                    int temp = maxHeap[index];
+                    maxHeap[index] = maxHeap[right];
+                    maxHeap[right] = temp;
+                    index = right;
+                }
+            } else {
+                break;
+            }
+        }
+        return element;
+    }
 
     public String toString() {
         if (size == 0) {
@@ -53,17 +87,17 @@ public class MaxHeap {
         // [3,1,2]
         System.out.println(maxheap.toString());
         // 3
-        //System.out.println(maxheap.peek());
+        System.out.println(maxheap.peek());
         // 3
-       // System.out.println(maxheap.pop());
-      //  System.out.println(maxheap.pop());
-      //  System.out.println(maxheap.pop());
+        System.out.println(maxheap.pop());
+        System.out.println(maxheap.pop());
+        System.out.println(maxheap.pop());
         // No element
-       // System.out.println(maxheap.toString());
-       // maxheap.add(4);
-        // Add too many elements
-       // maxheap.add(5);
-        // [4,1,2]
-       // System.out.println(maxheap.toString());
+        System.out.println(maxheap.toString());
+        maxheap.add(4);
+       
+        maxheap.add(5);
+        // [5,4]
+        System.out.println(maxheap.toString());
     }
 }
