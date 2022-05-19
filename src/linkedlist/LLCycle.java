@@ -19,6 +19,7 @@ public class LLCycle {
         ListNode head1 = new ListNode(1,node12);
         System.out.println(cycle.hasCycle(head1));
         System.out.println(cycle.detectCycle(head1));
+        System.out.println("Sout from code spaces");
     }
     public boolean hasCycle(ListNode head) {
         Set content = new HashSet();
