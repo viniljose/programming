@@ -9,6 +9,8 @@ package strings;
 public class LengthOfLongestSubstring {
 
     // brutforce method
+    //Time complexity : O(n^3)
+    //Space complexity : O(min(n, m))
     public int lengthOfLongestSubstring(String s) {
         int size = s.length();
         int length = 0;
@@ -33,8 +35,28 @@ public class LengthOfLongestSubstring {
         return true;
     } 
 
+    //Time complexity : O(n)
+    //Space complexity : O(min(n, m))
+    public int lengthOfLongestSubstringSW(String s) {
+        int[] chars = new int[128];
+        int left=0,right =0,res=0;
+        while(right<s.length()){
+            char c = s.charAt(right);
+            chars[c]++;
+            while(chars[c]>1){
+                char l = s.charAt(left);
+                chars[l]--;
+                left++;
+            }
+            res = Math.max(res, right-left+1);
+            right++;
+        }
+        return res;
+    }
+
     public static void main(String[] args){
         LengthOfLongestSubstring length = new LengthOfLongestSubstring();
         System.out.println(length.lengthOfLongestSubstring("abcabcbb"));
+        System.out.println(length.lengthOfLongestSubstringSW("abcabcbb"));
     }
 }
