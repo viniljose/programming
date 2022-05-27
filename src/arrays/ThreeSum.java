@@ -12,6 +12,8 @@ import java.util.List;
  */
 public class ThreeSum {
     
+    //Time complexity : O(n*2)
+    //Space complexity : O(n)
     public List<List<Integer>> threeSum(int[] nums) {
         Arrays.sort(nums);
         List<List<Integer>> res = new ArrayList<>();
