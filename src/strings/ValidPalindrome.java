@@ -1,3 +1,4 @@
+package strings;
 public class ValidPalindrome {
     public static void main(String[] args) {
         ValidPalindrome palindrome = new ValidPalindrome();
