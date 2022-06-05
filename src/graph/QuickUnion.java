@@ -25,7 +25,7 @@ public class QuickUnion {
         return find(x) == find(y);
     }
     public static void main(String[] args) throws Exception {
-        UnionFind uf = new UnionFind(10);
+        QuickUnion uf = new QuickUnion(10);
         // 1-2-5-6-7 3-8-9 4
         uf.union(1, 2);
         uf.union(2, 5);

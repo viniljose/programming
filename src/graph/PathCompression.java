@@ -1,43 +1,30 @@
 package graph;
 
-
-public class UnionByRank {
-    private int[] root;
-    private int[] rank;
-    public UnionByRank(int size){
+public class PathCompression {
+    int[] root;
+    public PathCompression(int size){
         root = new int[size];
-        rank = new int[size];
         for (int i = 0; i < size; i++) {
             root[i]=i;
-            rank[i]=1;
         }
     }
-
-    public int find(int x) {
-        while (x != root[x]) {
-            x = root[x];
-        }
-        return x;
+    public int find(int x){
+        if(x==root[x])
+            return x;
+        return root[x]=find(root[x]);
     }
     public void union(int x, int y) {
-        int rootX = find(x);
-        int rootY = find(y);
-        if (rootX != rootY) {
-            if(rank[rootX]>rank[rootY]){
-                root[rootY]=rootX;
-            } else if(rank[rootY]>rank[rootX]){
-                root[rootX]=rootY;
-            } else {
-                root[rootY]=rootX;
-                rank[rootX]+=1;
-            }
+        int rootX=find(x);
+        int rootY=find(y);
+        if(rootX!=rootY){
+            root[rootY]=rootX;
         }
     }
     public boolean connected(int x, int y) {
         return find(x) == find(y);
     }
     public static void main(String[] args) throws Exception {
-        UnionByRank uf = new UnionByRank(10);
+        PathCompression uf = new PathCompression(10);
         // 1-2-5-6-7 3-8-9 4
         uf.union(1, 2);
         uf.union(2, 5);
@@ -53,4 +40,3 @@ public class UnionByRank {
         System.out.println(uf.connected(4, 9)); // true
     }
 }
-
