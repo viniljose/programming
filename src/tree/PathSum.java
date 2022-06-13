@@ -1,7 +1,9 @@
 package tree;
 
 import java.util.Stack;
-
+/**
+ * https://leetcode.com/problems/path-sum/
+ */
 public class PathSum {
     public static void main(String[] args) {
         TreeNode tree =new TreeNode(1);

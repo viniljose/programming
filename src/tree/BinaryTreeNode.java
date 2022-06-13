@@ -14,7 +14,7 @@ public class BinaryTreeNode {
 
     }
 
-
+    //Pre-order traversal is to visit the root first. Then traverse the left subtree. Finally, traverse the right subtree.
     public void preOrder(BinaryTreeNode root){
         if(root != null){
             System.out.println(root.val);
@@ -41,6 +41,7 @@ public class BinaryTreeNode {
 
     }
 
+    //In-order traversal is to traverse the left subtree first. Then visit the root. Finally, traverse the right subtree.
     public void inOrder(BinaryTreeNode root){
         if(root != null){
             inOrder(root.left);
