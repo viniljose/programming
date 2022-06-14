@@ -23,6 +23,7 @@ public class DuplicateZeros {
         }
     }
 
+    //move one position right from len-2 back wards for each element starting from 0
     public void duplicateZeros(int[] arr) {
         int len = arr.length;
         for (int i = 0; i < len-1; i++) {
