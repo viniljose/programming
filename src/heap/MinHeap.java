@@ -1,5 +1,16 @@
 package heap;
-
+/**
+ * A common misconception is that a Heap is the same as a Priority Queue, which is not true.
+ * A priority queue is an abstract data type, while a Heap is a data structure.
+ * Therefore, a Heap is not a Priority Queue, but a way to implement a Priority Queue.
+ *  Implementing the priority queue with Heap will allow both insertion and deletion to have
+ *  a time complexity of O(\log N)O(logN).
+ *   A heap is a binary tree that meets the following criteria:
+ *   Is a complete binary tree;
+ *   The value of each node must be no greater than (or no less than) the value of its child nodes.
+ *   Max Heap: Each node in the Heap has a value no less than its child nodes. Therefore, the top element (root node) has the largest value in the Heap.
+ *   Min Heap: Each node in the Heap has a value no larger than its child nodes. Therefore, the top element (root node) has the smallest value in the Heap.
+ */
 public class MinHeap {
     private int capacity;
     private int size;

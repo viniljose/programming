@@ -3,7 +3,9 @@ package arrays;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
-
+/**
+ * https://leetcode.com/problems/set-matrix-zeroes/
+ */
 public class MatrixZeros {
     public static void main(String[] args) {
         MatrixZeros matrixZeros = new MatrixZeros();

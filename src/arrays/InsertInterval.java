@@ -1,7 +1,9 @@
 package arrays;
 
 import java.util.LinkedList;
-
+/**
+ * https://leetcode.com/problems/insert-interval/
+ */
 public class InsertInterval {
     public int[][] insert(int[][] intervals, int[] newInterval) {
         int newStart = newInterval[0];

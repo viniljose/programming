@@ -1,5 +1,7 @@
 package arrays;
-
+/*
+ * https://leetcode.com/problems/largest-number-at-least-twice-of-others/
+ */
 public class LargestNumberAtLeastTwiceOfOthers {
     public static void main(String[] args) {
         int[] data1 = new int[]{3,6,1,0};
