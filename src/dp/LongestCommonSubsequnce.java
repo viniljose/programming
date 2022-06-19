@@ -3,8 +3,8 @@ package dp;
 /**
  * 
  * https://www.geeksforgeeks.org/longest-common-subsequence-dp-4/
- *LCS for input Sequences “ABCDGH” and “AEDFHR” is “ADH” of length 3.
- *LCS for input Sequences “AGGTAB” and “GXTXAYB” is “GTAB” of length 4.
+ *LCS for input Sequences ABCDGH and AEDFHR is ADH of length 3.
+ *LCS for input Sequences AGGTAB and GXTXAYB is GTAB of length 4.
  */
 public class LongestCommonSubsequnce {
 	
@@ -48,6 +48,21 @@ public class LongestCommonSubsequnce {
 		}
 		return lcsString.reverse().toString();
 	}
+
+	//o(m*n) o(m*n)
+	public int lcs(String text1, String text2) {
+        int[][] dp = new int[text1.length()+1][text2.length()+1];
+        for (int i = text2.length()-1; i >=0 ; i--) {
+            for (int j = text1.length()-1; j >=0 ; j--) {
+                if(text2.charAt(i)==text1.charAt(j)){
+                    dp[i][j]=1+dp[i+1][j+1];
+                } else {
+                    dp[i][j]=Math.max(dp[i+1][j],dp[i][j+1]);
+                }
+            }
+        }
+        return dp[0][0];
+    }
 	
 	public static void main(String[] args) {
 		LongestCommonSubsequnce lcs = new LongestCommonSubsequnce();
