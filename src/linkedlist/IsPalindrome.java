@@ -2,7 +2,9 @@ package linkedlist;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * https://leetcode.com/problems/palindrome-linked-list/
+ */
 public class IsPalindrome {
     public static void main(String[] args) {
         ListNode node5 = new ListNode(1);

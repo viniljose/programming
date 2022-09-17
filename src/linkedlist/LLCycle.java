@@ -2,7 +2,11 @@ package linkedlist;
 
 import java.util.HashSet;
 import java.util.Set;
-
+/**
+ * https://leetcode.com/problems/linked-list-cycle/
+ * https://leetcode.com/problems/linked-list-cycle-ii/
+ *
+ */
 public class LLCycle {
     public static void main(String[] args) {
         LLCycle cycle = new LLCycle();
