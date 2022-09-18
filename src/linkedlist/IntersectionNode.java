@@ -2,7 +2,9 @@ package linkedlist;
 
 import java.util.HashSet;
 import java.util.Set;
-
+/**
+ * https://leetcode.com/problems/intersection-of-two-linked-lists/
+ */
 public class IntersectionNode {
     public static void main(String[] args) {
         ListNode node5 = new ListNode(4);
