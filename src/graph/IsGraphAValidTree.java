@@ -1,10 +1,10 @@
 package graph;
 
-public class IsGraphAValidTree {
-    
-}
 import java.util.*;
 
+/**
+ * https://leetcode.com/problems/graph-valid-tree/
+ */
 public class IsGraphAValidTree {
     public boolean validTree(int n, int[][] edges) {
         List<List<Integer>> adjacencyList = new ArrayList<>();
