@@ -6,7 +6,7 @@ package arrays;
  * Output: 3
  * The input array will only contain 0 and 1.
  * The length of input array is a positive integer and will not exceed 10,000
- * https://leetcode.com/explore/learn/card/fun-with-arrays/521/introduction/3238/
+ * https://leetcode.com/problems/max-consecutive-ones/
  *
  */
 public class FindMaxConsecutiveOnes {

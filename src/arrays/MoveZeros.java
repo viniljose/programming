@@ -3,7 +3,7 @@ package arrays;
 import java.util.Arrays;
 
 /**
- * https://leetcode.com/explore/learn/card/fun-with-arrays/511/in-place-operations/3157/
+ * https://leetcode.com/problems/move-zeroes/
  * Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
  * Input: nums = [0,1,0,3,12]
  * Output: [1,3,12,0,0]

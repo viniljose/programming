@@ -1,7 +1,7 @@
 package arrays;
 
 /**
- * https://leetcode.com/explore/learn/card/fun-with-arrays/521/introduction/3237/
+ * https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
  * Given an array nums of integers, return how many of them contain an even number of digits.
  * Input: nums = [12,345,2,6,7896]
  * Output: 2

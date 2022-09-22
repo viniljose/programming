@@ -1,7 +1,7 @@
 package arrays;
 
 /**
- * https://leetcode.com/explore/learn/card/fun-with-arrays/525/inserting-items-into-an-array/3245/
+ * https://leetcode.com/problems/duplicate-zeros/
  * Given a fixed length array arr of integers, duplicate each occurrence of zero, shifting the remaining elements to the right.
  * Input: [1,0,2,3,0,4,5,0]
  * after [1,0,0,2,3,0,0,4]

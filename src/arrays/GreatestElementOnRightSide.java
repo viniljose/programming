@@ -3,7 +3,7 @@ package arrays;
 import java.util.Arrays;
 
 /**
- * https://leetcode.com/explore/learn/card/fun-with-arrays/511/in-place-operations/3259/
+ * 
  * https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/
  * Given an array arr, replace every element in that array with the greatest element among the elements to its right,
  * and replace the last element with -1.After doing so, return the array.
