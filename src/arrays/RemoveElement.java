@@ -1,7 +1,7 @@
 package arrays;
 
 /**
- * https://leetcode.com/explore/learn/card/fun-with-arrays/526/deleting-items-from-an-array/3247/
+ * https://leetcode.com/problems/remove-element/
  * Given an array nums and a value val, remove all instances of that value in-place and return the new length.
  * Input: nums = [3,2,2,3], val = 3
  * Output: 2, nums = [2,2]
