@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /**
  * https://leetcode.com/explore/learn/card/fun-with-arrays/511/in-place-operations/3260/
+ * https://leetcode.com/problems/sort-array-by-parity/
  * Given an integer array nums, move all the even integers at the beginning of the array followed by all the odd integers.
  * Input: nums = [3,1,2,4]
  * Output: [2,4,3,1]
