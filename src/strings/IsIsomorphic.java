@@ -1,7 +1,7 @@
 package strings;
 
 import java.util.Arrays;
-
+//https://leetcode.com/problems/isomorphic-strings/
 public class IsIsomorphic {
     public boolean isIsomorphic(String s, String t) {
         int[] mappingS = new int[256];
