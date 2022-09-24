@@ -2,7 +2,9 @@ package strings;
 
 import java.util.HashMap;
 import java.util.Map;
-
+/**
+ * https://leetcode.com/problems/excel-sheet-column-number/
+ */
 public class ExcelColumnToNumber {
     public static void main(String[] args) {
         ExcelColumnToNumber excelColumnToNumber = new ExcelColumnToNumber();
