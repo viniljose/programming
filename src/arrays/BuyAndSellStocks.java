@@ -10,6 +10,8 @@ package arrays;
  * Input: prices = [7,6,4,3,1]
  * Output: 0
  * Hint:If we plot the numbers of the given array on a graph,We need to find the largest peak following the smallest valley.
+ * You keep two variables maxProfit and minimumPrice and populate it,minimumPrice will get reset if current price is lesser.
+ * maxProfit will reset if current price - minimumPrice is greater than maxProfit
  */
 public class BuyAndSellStocks {
 
