@@ -42,6 +42,10 @@ public class Meetings {
 		return minimum;
 	}
 
+	/**
+	 * main
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		Meetings mts = new Meetings();
 		Map<Float,Float> meetings1 = new HashMap<Float,Float>();
