@@ -4,6 +4,10 @@ import tree.TreeNode;
 
 import java.util.Stack;
 
+/**
+ * https://leetcode.com/problems/validate-binary-search-tree/
+ * Given the root of a binary tree, determine if it is a valid binary search tree (BST).
+ */
 public class ValidBST {
     private Stack<TreeNode> stack = new Stack<>();
     private Stack<Integer> upperLimit = new Stack<>();

@@ -3,6 +3,10 @@ package tree;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * https://leetcode.com/problems/symmetric-tree/
+ * Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).
+ */
 public class Symmetric {
     public static void main(String[] args) {
         TreeNode tree =new TreeNode(1);

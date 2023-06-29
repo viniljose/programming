@@ -5,6 +5,9 @@ import java.util.LinkedList;
 import java.util.List;
 /**
  * https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
+ * Design an algorithm to serialize and deserialize a binary tree. There is no restriction on how your
+ * serialization/deserialization algorithm should work. You just need to ensure that a binary tree can
+ * be serialized to a string and this string can be deserialized to the original tree structure.
  */
 public class Serialize {
     public static void main(String[] args) {
