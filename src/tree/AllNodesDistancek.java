@@ -8,7 +8,11 @@ import java.util.*;
  * values of all nodes that have a distance k from the target node.
  * Input: root = [3,5,1,6,2,0,8,null,null,7,4], target = 5, k = 2
  * Output: [7,4,1]
- * Convert this to a graph and do a DFS
+ * Convert this tree to a graph and do a DFS.Use a adjacency Map<Integer,List>,visited Set and result List.
+ * Build the graph using recursion with current(root initially) & parent(null initially) node as input,
+ * add into map current and parent node values for each other. navigate left and right childs if not null.
+ * use Graph traversal using DFS recursion passing target node , current distance and final distance.
+ * Get all neigbhors if not visited navigate recursievly, terminal condition is current distance = final distance
  */
 public class AllNodesDistancek {
     Map<Integer,List<Integer>> graph;
