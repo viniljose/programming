@@ -21,6 +21,11 @@ public class MeetingRooms2 {
         }
         Arrays.sort(start);
         Arrays.sort(end);
+        //When we encounter an ending event, that means that some meeting that started earlier has ended now.
+        // We are not really concerned with which meeting has ended. All we need is that some meeting ended thus
+        // making a room available.
+        //If no meeting has ended by the start of current meeting ,then we allocate a room.
+        //If a meeting was ended by the time of current meeting start, then we can re-use the room.
         int startPointer = 0, endPointer=0,rooms=0;
         while(startPointer < intervals.length){
             if(start[startPointer]>=end[endPointer]){
