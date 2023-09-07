@@ -18,6 +18,7 @@ public class RemoveDuplicatesFromSortedArray {
 
     }
 
+    //better approach
     public int removeDuplicates(int[] nums) {
        int len = nums.length;
         if (len ==0 )
