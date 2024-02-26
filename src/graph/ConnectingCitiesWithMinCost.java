@@ -14,6 +14,6 @@ package graph;
 public class ConnectingCitiesWithMinCost {
 
     public int minimumCost(int n, int[][] connections) {
-
+        return 0;
     }
 }
