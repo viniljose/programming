@@ -20,6 +20,14 @@ public class Trie {
         root = new TrieNode();
     }
 
+    /**
+     * Insert (word): This inserts a word into the trie.
+     * @param word
+     * In this function, we take a word as input. We begin from the root node and iterate over the string one character at a time.
+     * At each node, we check whether or not a child node with the character is present.
+     * If it’s not present, a new node is initialized. For the last character of the word, we also set the boolean variable to TRUE
+     * for the corresponding node.
+     */
     public void insert(String word) {
         TrieNode cur = root;
         for (int i = 0; i < word.length(); i++) {
@@ -30,6 +38,12 @@ public class Trie {
         }
         cur.isWord=true;
     }
+
+    /**
+     * This searches the given word in the trie and returns TRUE, if found. Otherwise, return FALSE.
+     * @param word
+     * @return
+     */
     public boolean search(String word) {
         TrieNode cur = root;
         for (int i = 0; i < word.length(); i++) {
@@ -40,6 +54,12 @@ public class Trie {
         }
         return cur.isWord;
     }
+
+    /**
+     * This searches the given prefix in the trie and returns TRUE, if found. Otherwise, return FALSE.
+     * @param prefix
+     * @return
+     */
     public boolean startsWith(String prefix) {
         TrieNode cur = root;
         for (int i = 0; i < prefix.length(); i++) {
